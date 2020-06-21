@@ -14,15 +14,15 @@ const breakpoints = [
 ];
 
 const fonts = {
-  title: "'Title', Georgia, Serif",
+  title: "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Droid Sans, Helvetica Neue, sans-serif",
   body:
-    "'Text','Libre Baskerville', Georgia, Serif",
+    "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Droid Sans, Helvetica Neue, sans-serif",
   monospace: `"Operator Mono", Consolas, Menlo, Monaco, source-code-pro, Courier New, monospace`,
 };
 
 const fontsWeight = {
-  regular: "300",
-  bold: "600",
+  regular: "400",
+  bold: "800",
 };
 
 const colorModeTransition =
