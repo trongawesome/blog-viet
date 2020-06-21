@@ -14,9 +14,8 @@ const breakpoints = [
 ];
 
 const fonts = {
-  title: "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Droid Sans, Helvetica Neue, sans-serif",
-  body:
-    "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Droid Sans, Helvetica Neue, sans-serif",
+  title: "-apple-system, BlinkMacSystemFont, 'Inter', Segoe UI, Roboto, sans-serif",
+  body: "-apple-system, BlinkMacSystemFont, 'Inter', Segoe UI, Roboto, sans-serif",
   monospace: `"Operator Mono", Consolas, Menlo, Monaco, source-code-pro, Courier New, monospace`,
 };
 
