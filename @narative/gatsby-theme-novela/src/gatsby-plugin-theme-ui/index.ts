@@ -21,7 +21,7 @@ const fonts = {
 
 const fontsWeight = {
   regular: "400",
-  bold: "800",
+  bold: "700",
 };
 
 const colorModeTransition =

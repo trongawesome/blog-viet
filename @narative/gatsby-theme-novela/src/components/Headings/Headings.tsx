@@ -16,24 +16,24 @@ const commonStyles = p => css`
 `;
 
 const h1 = styled.h1`
-  font-size: 64px;
+  font-size: 88px;
   line-height: 1.15;
   ${commonStyles};
 
   ${mediaqueries.desktop`
-    font-size: 48px;
+    font-size: 64px;
     line-height: 1.2;
   `};
 
   ${mediaqueries.phablet`
-    font-size: 40px;
+    font-size: 56px;
     line-height: 1.3;
   `};
 `;
 
 const h2 = styled.h2`
-  font-size: 40px;
-  line-height: 1.333;
+  font-size: 56px;
+  line-height: 1.133;
   ${commonStyles};
 
   ${mediaqueries.desktop`

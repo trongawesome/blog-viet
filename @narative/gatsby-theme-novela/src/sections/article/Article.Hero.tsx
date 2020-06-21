@@ -64,7 +64,7 @@ const Header = styled.header`
   z-index: 10;
   margin:100px auto 56px;
   padding-left: 68px;
-  max-width: 749px;
+  max-width: 944px;
 
   ${mediaqueries.desktop`
     padding-left: 53px;
@@ -91,6 +91,7 @@ const Header = styled.header`
 const HeroHeading = styled(Headings.h1)`
   font-family: ${p => p.theme.fonts.title};
   margin-bottom: 25px;
+  text-align: center;
   font-weight: ${p => p.theme.fontsWeight.bold};
 
   ${mediaqueries.tablet`
@@ -102,6 +103,7 @@ const Excerpt = styled(Headings.h3)`
   font-size: 28px;
   font-family: ${p => p.theme.fonts.body};
   color: ${p => p.theme.colors.secondary};
+  text-align: center;
   margin-bottom: 24px;
   margin-top: 24px;
   font-weight: normal;
