@@ -32,7 +32,7 @@ const h1 = styled.h1`
 `;
 
 const h2 = styled.h2`
-  font-size: 56px;
+  font-size: 48px;
   line-height: 1.133;
   ${commonStyles};
 
@@ -47,7 +47,7 @@ const h2 = styled.h2`
 `;
 
 const h3 = styled.h3`
-  font-size: 24px;
+  font-size: 32px;
   line-height: 1.45;
   ${commonStyles};
 
@@ -61,7 +61,7 @@ const h3 = styled.h3`
 `;
 
 const h4 = styled.h4`
-  font-size: 18px;
+  font-size: 24px;
   line-height: 1.45;
   ${commonStyles};
 

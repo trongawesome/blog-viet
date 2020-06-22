@@ -27,10 +27,8 @@ const ArticleHero: React.FC<ArticleHeroProps> = ({ article, authors }) => {
         <HeroHeading>{article.title}</HeroHeading>
         <Excerpt>{article.excerpt}</Excerpt>
         <HeroSubtitle hasCoAUthors={hasCoAUthors}>
-          <ArticleAuthors authors={authors} />
           <ArticleMeta hasCoAUthors={hasCoAUthors}>
             {article.date}
-            {/* {article.date} · {article.timeToRead} min read */}
           </ArticleMeta>
         </HeroSubtitle>
       </Header>
@@ -52,11 +50,7 @@ const Hero = styled.div`
 `;
 
 const ArticleMeta = styled.div<{ hasCoAUthors: boolean }>`
-  margin-left: ${p => (p.hasCoAUthors ? '10px' : '0')};
-
-  ${mediaqueries.phablet`
-    margin-left: 0;
-  `}
+  text-align: center;
 `;
 
 const Header = styled.header`
@@ -119,8 +113,7 @@ const Excerpt = styled(Headings.h3)`
 
 const HeroSubtitle = styled.div<{ hasCoAUthors: boolean }>`
   position: relative;
-  display: flex;
-  font-size: 14px;
+  font-size: 18px;
   color: ${p => p.theme.colors.secondary};
   align-items: center;
   
