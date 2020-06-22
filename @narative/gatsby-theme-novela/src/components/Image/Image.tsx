@@ -16,7 +16,9 @@ const StyledGatsbyImag = styled(GatsbyImg)`
     left: -10% !important;
     width: 120% !important;
     height: 120% !important;
+    
   }
+
 `;
 
 /**

@@ -162,13 +162,33 @@ const Item = styled.div`
 
 const ImageContainer = styled.div`
   position: relative;
-  height: 280px;
-  margin-bottom: 30px;
+  height: 480px;
+  margin-bottom: 24px;
   transition: transform 0.3s var(--ease-out-quad),
     box-shadow 0.3s var(--ease-out-quad);
 
+    padding: 24px;
+    background-color: white;
+    
+  
+    &::after {
+      content: '';
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      position: absolute;
+      z-index: 2;
+      background-repeat: no-repeat;
+      background-image: linear-gradient(to right, rgba(255,255,255,0.1) 0.5%, rgba(0,0,0,0.15) 1.2%, transparent 1.2%), linear-gradient(to bottom, rgba(255,255,255,0.1) 0.5%, rgba(0,0,0,0.15) 1.2%, transparent 1.2%), linear-gradient(to bottom, rgba(255,255,255,0.1) 0.5%, rgba(0,0,0,0.15) 1.2%, transparent 1.2%), linear-gradient(265deg, rgba(0,0,0,0.2), transparent 10%), linear-gradient(5deg, rgba(0,0,0,0.2), transparent 15%), linear-gradient(-5deg, rgba(0,0,0,0.1), transparent 10%), linear-gradient(5deg, rgba(0,0,0,0.1), transparent 10%), linear-gradient(-265deg, rgba(0,0,0,0.2), transparent 10%), linear-gradient(-5deg, rgba(0,0,0,0.2), transparent 15%), linear-gradient(266deg, rgba(0,0,0,0.2), transparent 10%);
+      background-size: 50% 100%, 100% 33.3333%, 100% 33.3333%, 50% 33.3333%, 50% 33.3333%, 50% 33.3333%, 50% 33.3333%, 50% 33.3333%, 50% 33.3333%, 50% 33.3333%;
+      background-position: right top, left center, left bottom, left top, left top, right top, left center, right center, right center, left bottom;
+    }
+
   & > div {
     height: 100%;
+
+    filter: saturate(90%) contrast(85%);
   }
 
   ${mediaqueries.tablet`
@@ -254,11 +274,11 @@ const ArticleLink = styled(Link)`
   transition: transform 0.33s var(--ease-out-quart);
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 
-  &:hover ${ImageContainer}, &:focus ${ImageContainer} {
-    transform: translateY(-1px);
-    box-shadow: 0 30px 40px -20px rgba(41, 65, 69, 0.32),
-      0 30px 30px -30px rgba(41, 65, 69, 0.52);
-  }
+  // &:hover ${ImageContainer}, &:focus ${ImageContainer} {
+  //   transform: translateY(-1px);
+  //   box-shadow: 0 30px 40px -20px rgba(41, 65, 69, 0.32),
+  //     0 30px 30px -30px rgba(41, 65, 69, 0.52);
+  // }
 
   &:hover h2,
   &:focus h2 {

@@ -222,7 +222,7 @@ const ImageCSS = css`
     height: auto;
     z-index: 0;
     margin: 15px auto 50px;
-
+    
     ${mediaqueries.tablet`
       margin: 10px auto 45px;
     `};
@@ -237,6 +237,25 @@ const ImageCSS = css`
     margin: 15px auto 50px;
     width: 100%;
     max-width: 680px;
+
+
+    padding: 24px;
+    background-color: white;
+    filter: saturate(80%) contrast(85%);
+    
+    &::after {
+      content: '';
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      position: absolute;
+      z-index: 2;
+      background-repeat: no-repeat;
+      background-image: linear-gradient(to right, rgba(255,255,255,0.1) 0.5%, rgba(0,0,0,0.15) 1.2%, transparent 1.2%), linear-gradient(to bottom, rgba(255,255,255,0.1) 0.5%, rgba(0,0,0,0.15) 1.2%, transparent 1.2%), linear-gradient(to bottom, rgba(255,255,255,0.1) 0.5%, rgba(0,0,0,0.15) 1.2%, transparent 1.2%), linear-gradient(265deg, rgba(0,0,0,0.2), transparent 10%), linear-gradient(5deg, rgba(0,0,0,0.2), transparent 15%), linear-gradient(-5deg, rgba(0,0,0,0.1), transparent 10%), linear-gradient(5deg, rgba(0,0,0,0.1), transparent 10%), linear-gradient(-265deg, rgba(0,0,0,0.2), transparent 10%), linear-gradient(-5deg, rgba(0,0,0,0.2), transparent 15%), linear-gradient(266deg, rgba(0,0,0,0.2), transparent 10%);
+      background-size: 50% 100%, 100% 33.3333%, 100% 33.3333%, 50% 33.3333%, 50% 33.3333%, 50% 33.3333%, 50% 33.3333%, 50% 33.3333%, 50% 33.3333%, 50% 33.3333%;
+      background-position: right top, left center, left bottom, left top, left top, right top, left center, right center, right center, left bottom;
+    }
 
     ${mediaqueries.tablet`
       margin: 10px auto 45px;
@@ -269,6 +288,25 @@ const ImageCSS = css`
     margin: 15px auto 50px;
     width: 100%;
     max-width: ${IMAGE_WIDTHS.large};
+
+
+    padding: 24px;
+    background-color: white;
+    filter: saturate(80%) contrast(85%);
+
+    &::after {
+      content: '';
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      position: absolute;
+      z-index: 2;
+      background-repeat: no-repeat;
+      background-image: linear-gradient(to right, rgba(255,255,255,0.1) 0.5%, rgba(0,0,0,0.15) 1.2%, transparent 1.2%), linear-gradient(to bottom, rgba(255,255,255,0.1) 0.5%, rgba(0,0,0,0.15) 1.2%, transparent 1.2%), linear-gradient(to bottom, rgba(255,255,255,0.1) 0.5%, rgba(0,0,0,0.15) 1.2%, transparent 1.2%), linear-gradient(265deg, rgba(0,0,0,0.2), transparent 10%), linear-gradient(5deg, rgba(0,0,0,0.2), transparent 15%), linear-gradient(-5deg, rgba(0,0,0,0.1), transparent 10%), linear-gradient(5deg, rgba(0,0,0,0.1), transparent 10%), linear-gradient(-265deg, rgba(0,0,0,0.2), transparent 10%), linear-gradient(-5deg, rgba(0,0,0,0.2), transparent 15%), linear-gradient(266deg, rgba(0,0,0,0.2), transparent 10%);
+      background-size: 50% 100%, 100% 33.3333%, 100% 33.3333%, 50% 33.3333%, 50% 33.3333%, 50% 33.3333%, 50% 33.3333%, 50% 33.3333%, 50% 33.3333%, 50% 33.3333%;
+      background-position: right top, left center, left bottom, left top, left top, right top, left center, right center, right center, left bottom;
+    }
 
     ${mediaqueries.desktop_medium`
       left: -34px;

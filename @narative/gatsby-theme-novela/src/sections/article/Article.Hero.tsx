@@ -62,29 +62,29 @@ const ArticleMeta = styled.div<{ hasCoAUthors: boolean }>`
 const Header = styled.header`
   position: relative;
   z-index: 10;
-  margin:100px auto 56px;
-  padding-left: 68px;
+  margin: 0px auto 56px;
   max-width: 944px;
+  padding: 96px 128px 0px;
 
   ${mediaqueries.desktop`
     padding-left: 53px;
     max-width: calc(507px + 53px);
-    margin: 100px auto 70px;
+    margin: 0 auto 70px;
   `}
 
   ${mediaqueries.tablet`
     padding-left: 0;
-    margin: 100px auto 70px;
+    margin: 0 auto 70px;
     max-width: 480px;
   `}
 
   ${mediaqueries.phablet`
-    margin: 64px auto 64px;
+    margin: 0 auto 64px;
     padding: 0 40px;
   `}
 
   @media screen and (max-height: 700px) {
-    margin: 100px auto 48px;
+    margin: 0 auto 48px;
   }
 `;
 
@@ -157,9 +157,25 @@ const HeroImage = styled.div`
   position: relative;
   z-index: 1;
   width: 100%;
-  max-width: 944px;
   overflow: hidden;
   margin: 0 auto;
+  background-color: white;
+  // padding: 32px;
+  filter: saturate(90%) contrast(85%);
+
+  &::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+    z-index: 2;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(to right, rgba(255,255,255,0.1) 0.5%, rgba(0,0,0,0.15) 1.2%, transparent 1.2%), linear-gradient(to bottom, rgba(255,255,255,0.1) 0.5%, rgba(0,0,0,0.15) 1.2%, transparent 1.2%), linear-gradient(to bottom, rgba(255,255,255,0.1) 0.5%, rgba(0,0,0,0.15) 1.2%, transparent 1.2%), linear-gradient(265deg, rgba(0,0,0,0.2), transparent 10%), linear-gradient(5deg, rgba(0,0,0,0.2), transparent 15%), linear-gradient(-5deg, rgba(0,0,0,0.1), transparent 10%), linear-gradient(5deg, rgba(0,0,0,0.1), transparent 10%), linear-gradient(-265deg, rgba(0,0,0,0.2), transparent 10%), linear-gradient(-5deg, rgba(0,0,0,0.2), transparent 15%), linear-gradient(266deg, rgba(0,0,0,0.2), transparent 10%);
+    background-size: 50% 100%, 100% 33.3333%, 100% 33.3333%, 50% 33.3333%, 50% 33.3333%, 50% 33.3333%, 50% 33.3333%, 50% 33.3333%, 50% 33.3333%, 50% 33.3333%;
+    background-position: right top, left center, left bottom, left top, left top, right top, left center, right center, right center, left bottom;
+  }
 
   ${mediaqueries.tablet`
     max-width: 100%;
