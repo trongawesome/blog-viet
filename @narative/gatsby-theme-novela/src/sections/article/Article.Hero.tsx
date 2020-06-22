@@ -160,8 +160,7 @@ const HeroImage = styled.div`
   overflow: hidden;
   margin: 0 auto;
   background-color: white;
-  // padding: 32px;
-  filter: saturate(90%) contrast(85%);
+  padding: 32px;
 
   &::after {
     content: '';
@@ -188,6 +187,7 @@ const HeroImage = styled.div`
 
     & > div {
       height: 220px;
+      filter: saturate(90%) contrast(85%);
     }
 `}
 `;

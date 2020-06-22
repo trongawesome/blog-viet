@@ -222,6 +222,7 @@ const ImageCSS = css`
     height: auto;
     z-index: 0;
     margin: 15px auto 50px;
+    filter: saturate(80%) contrast(85%);
     
     ${mediaqueries.tablet`
       margin: 10px auto 45px;
@@ -239,9 +240,8 @@ const ImageCSS = css`
     max-width: 680px;
 
 
-    padding: 24px;
+    padding: 16px;
     background-color: white;
-    filter: saturate(80%) contrast(85%);
     
     &::after {
       content: '';
@@ -290,9 +290,8 @@ const ImageCSS = css`
     max-width: ${IMAGE_WIDTHS.large};
 
 
-    padding: 24px;
+    padding: 16px;
     background-color: white;
-    filter: saturate(80%) contrast(85%);
 
     &::after {
       content: '';
