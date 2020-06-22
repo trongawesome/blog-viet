@@ -3,17 +3,17 @@ import prism from "./prism";
 export default {
   prism,
 
-  primary: "#FFFFFF",
-  secondary: "#FAFAFA",
-  grey: "#FAFAFA",
-  background: "#17171D",
+  primary: "#343434",
+  secondary: "#5B5B5B",
+  grey: "#343434",
+  background: "#FFE5D3",
   backgroundModal: "rgba(209, 232, 235, 0.98)",
   cleanBackground: "#FFFFFF",
   accent: "#F5495E",
   hover: "rgba(0, 0, 0, 0.07)",
   gradient: "linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%)",
   gradientImage: "linear-gradient(180deg, rgba(209, 232, 235, 0) 0%, rgba(209, 232, 235, 0.95) 71.88%, #D1E8EB 100%)",
-  articleText: "#FAFAFA",
+  articleText: "#4D4D4D",
   track: "rgba(8, 8, 11, 0.3)",
   progress: "#000",
   card: "#fff",
@@ -22,7 +22,7 @@ export default {
   errorBackground: "rgba(238, 86, 91, 0.1)",
   horizontalRule: "rgba(8, 8, 11, 0.15)",
   inputBackground: "rgba(0, 0, 0, 0.05)",
-  textTitle: "#FFFFFF",
+  textTitle: "#343434",
   neumorphismShadown: "10px 10px 22px rgba(156, 192, 197, 0.28), -10px -10px 24px rgba(240, 249, 250, 0.65)",
   modes: {
     dark: {

@@ -3,7 +3,7 @@ import mediaqueries from "@styles/media";
 
 const Paragraph = styled.p`
   line-height: 1.556;
-  font-size: 18px;
+  font-size: 20px;
   color: ${p => p.theme.colors.articleText};
   font-family: ${p => p.theme.fonts.body};
   transition: ${p => p.theme.colorModeTransition};

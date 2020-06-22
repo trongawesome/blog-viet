@@ -79,39 +79,47 @@ const Article: Template = ({ pageContext, location }) => {
   return (
     <Layout>
       <ArticleSEO article={article} authors={authors} location={location} />
-      <ArticleHero article={article} authors={authors} />
-      <ArticleBody ref={contentSectionRef}>
-        <MDXRenderer content={article.body}>
-        </MDXRenderer>
-      </ArticleBody>
-      {mailchimp && article.subscription && <Subscription />}
+
+      <Section>
+        <Container>
+          <ArticleHero article={article} authors={authors} />
+          <ArticleBody ref={contentSectionRef}>
+            <MDXRenderer content={article.body}>
+            </MDXRenderer>
+          </ArticleBody>
+        </Container>
+      </Section>
+      {/* {mailchimp && article.subscription && <Subscription />}
       {next.length > 0 && (
         <NextArticle narrow>
           <FooterNext>More from {name}</FooterNext>
           <ArticlesNext articles={next} />
           <FooterSpacer />
         </NextArticle>
-      )}
+      )} */}
     </Layout>
   );
 };
 
 export default Article;
 
-const MobileControls = styled.div`
+const Container = styled.div`
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 64px;
   position: relative;
-  padding-top: 60px;
-  transition: background 0.2s linear;
-  text-align: center;
+  box-sizing: border-box;
+  display: block;
+  background-color: white;
+  box-shadow: 0 3px 12px alpha(black,.2);
+  // filter: saturate(70%) contrast(85%);
 
-  ${mediaqueries.tablet_up`
-    display: none;
-  `}
 `;
 
 const ArticleBody = styled.article`
   position: relative;
-  padding: 56px 0 35px;
+  padding: 56px 0 160px;
   transition: background 0.2s linear;
   
   ${mediaqueries.tablet`
