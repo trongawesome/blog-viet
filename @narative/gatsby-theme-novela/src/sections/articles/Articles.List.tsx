@@ -162,12 +162,12 @@ const Item = styled.div`
 
 const ImageContainer = styled.div`
   position: relative;
-  height: 480px;
+  height: 320px;
   margin-bottom: 24px;
   transition: transform 0.3s var(--ease-out-quad),
     box-shadow 0.3s var(--ease-out-quad);
 
-    padding: 24px;
+    padding: 16px;
     background-color: white;
     
   
