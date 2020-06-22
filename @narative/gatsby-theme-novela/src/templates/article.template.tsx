@@ -111,9 +111,7 @@ const Container = styled.div`
   position: relative;
   box-sizing: border-box;
   display: block;
-  background-color: white;
   box-shadow: 0 3px 12px alpha(black,.2);
-  // filter: saturate(70%) contrast(85%);
 
 `;
 

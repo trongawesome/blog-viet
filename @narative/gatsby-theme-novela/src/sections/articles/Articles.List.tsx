@@ -204,7 +204,7 @@ const ImageContainer = styled.div`
 `;
 
 const Title = styled(Headings.h2)`
-  font-size: 21px;
+  font-size: 28px;
   font-family: ${p => p.theme.fonts.title};
   margin-bottom: 10px;
   transition: color 0.3s ease-in-out;
@@ -228,7 +228,7 @@ const Title = styled(Headings.h2)`
 
 const Excerpt = styled.p`
   ${limitToTwoLines};
-  font-size: 16px;
+  font-size: 18px;
   margin-bottom: 10px;
   color: ${p => p.theme.colors.secondary};
   font-family: ${p => p.theme.fonts.body};
@@ -271,16 +271,15 @@ const ArticleLink = styled(Link)`
   top: 0;
   left: 0;
   z-index: 1;
-  transition: transform 0.33s var(--ease-out-quart);
+  transition: transform 0.25s var(--ease-out-quart);
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 
-  // &:hover ${ImageContainer}, &:focus ${ImageContainer} {
-  //   transform: translateY(-1px);
-  //   box-shadow: 0 30px 40px -20px rgba(41, 65, 69, 0.32),
-  //     0 30px 30px -30px rgba(41, 65, 69, 0.52);
-  // }
+  &:hover ${ImageContainer} {
+    transform: translateY(-2px);
+    // box-shadow: 0 16px 0 -10px rgba(255,255,255,0.71), 0 25px 0 -14px rgba(255,255,255,0.71), 0 25px 0 -14px rgba(240,172,142,0.79);
+  }
 
-  &:hover h2,
+
   &:focus h2 {
     color: ${p => p.theme.colors.accent};
   }
