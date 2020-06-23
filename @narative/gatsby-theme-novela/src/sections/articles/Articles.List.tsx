@@ -74,17 +74,17 @@ const ListItem: React.FC<ArticlesListItemProps> = ({ article, narrow }) => {
         <ImageContainer >
           {hasHeroImage ? <Image src={imageSource} /> : <ImagePlaceholder />}
         </ImageContainer>
-        <div>
+        {/* <TextContainer>
+        </TextContainer> */}
           <Title dark hasOverflow={hasOverflow}>
             {article.title}
           </Title>
-          <Excerpt>
+          {/* <Excerpt>
             {article.excerpt}
-          </Excerpt>
+          </Excerpt> */}
           <MetaData>
             {article.date}
           </MetaData>
-        </div>
       </Item>
     </ArticleLink>
   );
@@ -162,7 +162,7 @@ const Item = styled.div`
 
 const ImageContainer = styled.div`
   position: relative;
-  height: 320px;
+  height: 300px;
   margin-bottom: 24px;
   transition: transform 0.3s var(--ease-out-quad),
     box-shadow 0.3s var(--ease-out-quad);
@@ -203,9 +203,25 @@ const ImageContainer = styled.div`
   `}
 `;
 
+const TextContainer = styled.div`
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 40px 40px;
+
+  // backdrop-filter: saturate(180%) blur(20px);
+  // background-color: rgba(255,255,255,0.72);
+
+  ${mediaqueries.phablet`
+    padding: 40px 32px;
+  `}
+`;
+
 const Title = styled(Headings.h2)`
   font-size: 28px;
+  line-height: 1.3;
   font-family: ${p => p.theme.fonts.title};
+  color: ${p => p.theme.colors.secondary};
   margin-bottom: 10px;
   transition: color 0.3s ease-in-out;
   ${limitToTwoLines};
@@ -275,7 +291,7 @@ const ArticleLink = styled(Link)`
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 
   &:hover ${ImageContainer} {
-    transform: translateY(-2px);
+    // transform: translateY(-2px);
     // box-shadow: 0 16px 0 -10px rgba(255,255,255,0.71), 0 25px 0 -14px rgba(255,255,255,0.71), 0 25px 0 -14px rgba(240,172,142,0.79);
   }
 
