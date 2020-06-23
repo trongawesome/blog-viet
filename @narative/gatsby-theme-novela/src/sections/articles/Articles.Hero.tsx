@@ -49,7 +49,7 @@ const ArticlesHero: React.FC<IAuthor> = ({ authors }) => {
       <HeadingContainer style={{ maxWidth: `${hero.maxWidth}px` }}>
         <HeroHeading dangerouslySetInnerHTML={{ __html: hero.writingHeading }} />
         <InfoText>
-          Without words, apps would be an unusable jumble of shapes and icons.
+          Góp nhặt suy nghĩ bằng ngôn ngữ mẹ đẻ. Cà xát thật sâu vào tâm hồn.
         </InfoText>
       </HeadingContainer>
     </Section>
@@ -92,11 +92,17 @@ const HeadingContainer = styled.div`
 `;
 
 const InfoText = styled.p`
-  font-size: 20px;
+  font-size: 24px;
   margin-top: 16px;
   line-height: 1.5;
   font-family: ${p => p.theme.fonts.body};
+  font-weight: ${p => p.theme.fontsWeight.light};
   color: ${p => p.theme.colors.secondary};
+
+  ${mediaqueries.phablet`
+    font-size: 22px;
+  `}
+
 `;
 
 const Anchor = styled(Link)`
