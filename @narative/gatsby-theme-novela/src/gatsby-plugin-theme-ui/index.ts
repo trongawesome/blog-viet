@@ -20,6 +20,7 @@ const fonts = {
 };
 
 const fontsWeight = {
+  light: "300",
   regular: "400",
   bold: "700",
 };

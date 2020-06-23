@@ -59,16 +59,16 @@ const ArticlesHero: React.FC<IAuthor> = ({ authors }) => {
 export default ArticlesHero;
 
 const HeadingContainer = styled.div`
-  margin: 104px 0 40px;
+  margin: 160px 0 96px;
   
   ${mediaqueries.desktop`
-  width: 80%;
+    width: 80%;
   `}
   
   ${mediaqueries.tablet`
-  width: 100%;
+    width: 100%;
   `}
-  `;
+`;
   
   const HeroHeading = styled.h1`
   font-style: normal;

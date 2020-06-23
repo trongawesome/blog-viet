@@ -83,10 +83,6 @@ const ARTICLE_WIDTH = css`
   ${mediaqueries.tablet`
     max-width: 486px;
   `};
-
-  ${mediaqueries.phablet`
-    padding: 0 20px;
-  `};
 `;
 
 const HeadingsCSS = css`
@@ -239,7 +235,6 @@ const ImageCSS = css`
     width: 100%;
     max-width: 680px;
 
-
     padding: 16px;
     background-color: white;
     
@@ -259,6 +254,7 @@ const ImageCSS = css`
 
     ${mediaqueries.tablet`
       margin: 10px auto 45px;
+      padding: 12px;
     `};
 
     ${mediaqueries.desktop`
@@ -268,10 +264,6 @@ const ImageCSS = css`
     ${mediaqueries.tablet`
       max-width: 486px;
       margin: 0 auto 25px;
-    `};
-
-    ${mediaqueries.phablet`
-      padding: 0 20px;
     `};
   }
 
@@ -288,7 +280,6 @@ const ImageCSS = css`
     margin: 15px auto 50px;
     width: 100%;
     max-width: ${IMAGE_WIDTHS.large};
-
 
     padding: 16px;
     background-color: white;
@@ -309,6 +300,7 @@ const ImageCSS = css`
 
     ${mediaqueries.desktop_medium`
       left: -34px;
+      padding: 12px;
     `};
 
     ${mediaqueries.desktop`

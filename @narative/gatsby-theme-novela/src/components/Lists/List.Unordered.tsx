@@ -9,7 +9,7 @@ const UnorderedList = styled.ul`
   padding: 15px 0 30px 30px;
   transition: ${p => p.theme.colorModeTransition};
   margin: 0 auto;
-  font-size: 18px;
+  font-size: 20;
 
   width: 100%;
   max-width: 680px;
@@ -62,9 +62,10 @@ const UnorderedList = styled.ul`
     content: '';
     position: absolute;
     left: -30px;
-    top: 8px;
+    top: 12px;
     height: 8px;
     width: 8px;
+    border-radius: 100%;
     background: ${p => p.theme.colors.articleText};
 
     ${mediaqueries.tablet`

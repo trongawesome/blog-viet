@@ -51,30 +51,35 @@ const Hero = styled.div`
 
 const ArticleMeta = styled.div<{ hasCoAUthors: boolean }>`
   text-align: center;
+  font-size: 14px;
+  font-weight: ${p => p.theme.fontsWeight.regular};
+  color: ${p => p.theme.colors.secondary};
+  font-family: ${p => p.theme.fonts.body};
+  text-transform: uppercase;
 `;
 
 const Header = styled.header`
   position: relative;
   z-index: 10;
   margin: 0px auto 56px;
-  max-width: 944px;
+  // max-width: 944px;
   padding: 96px 128px 0px;
 
   ${mediaqueries.desktop`
-    padding-left: 53px;
-    max-width: calc(507px + 53px);
     margin: 0 auto 70px;
+    padding-left: 0;
+    padding-right: 0;
   `}
 
   ${mediaqueries.tablet`
     padding-left: 0;
-    margin: 0 auto 70px;
-    max-width: 480px;
+    margin: 0;
+    margin-bottom: 40px;
   `}
 
   ${mediaqueries.phablet`
-    margin: 0 auto 64px;
-    padding: 0 40px;
+    margin: 0 auto 32px;
+    padding: 96px 0px 0px;
   `}
 
   @media screen and (max-height: 700px) {
@@ -100,7 +105,7 @@ const Excerpt = styled(Headings.h3)`
   text-align: center;
   margin-bottom: 24px;
   margin-top: 24px;
-  font-weight: normal;
+  font-weight: ${p => p.theme.fontsWeight.light};
   line-height: 1.5;
 
   ${mediaqueries.tablet`
@@ -176,10 +181,9 @@ const HeroImage = styled.div`
   ${mediaqueries.phablet`
     margin: 0 auto;
     width: calc(100vw - 40px);
-    height: 220px;
+    padding: 16px;
 
     & > div {
-      height: 220px;
       filter: saturate(90%) contrast(85%);
     }
 `}

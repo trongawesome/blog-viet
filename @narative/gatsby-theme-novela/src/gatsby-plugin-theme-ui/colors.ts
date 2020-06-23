@@ -9,7 +9,7 @@ export default {
   background: "#FFE5D3",
   backgroundModal: "rgba(209, 232, 235, 0.98)",
   cleanBackground: "#FFFFFF",
-  accent: "#F5495E",
+  accent: "#FFBA26",
   hover: "rgba(0, 0, 0, 0.07)",
   gradient: "linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%)",
   gradientImage: "linear-gradient(180deg, rgba(209, 232, 235, 0) 0%, rgba(209, 232, 235, 0.95) 71.88%, #D1E8EB 100%)",
@@ -21,7 +21,7 @@ export default {
   errorBackground: "rgba(238, 86, 91, 0.1)",
   horizontalRule: "rgba(8, 8, 11, 0.15)",
   inputBackground: "rgba(0, 0, 0, 0.05)",
-  articleText: "#064039",
+  articleText: "#475C59",
   textTitle: "#064039",
   neumorphismShadown: "10px 10px 22px rgba(156, 192, 197, 0.28), -10px -10px 24px rgba(240, 249, 250, 0.65)",
   modes: {
