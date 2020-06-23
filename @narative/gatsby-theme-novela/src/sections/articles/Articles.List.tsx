@@ -188,7 +188,7 @@ const ImageContainer = styled.div`
   & > div {
     height: 100%;
 
-    filter: saturate(90%) contrast(85%);
+    filter: saturate(70%) contrast(85%);
   }
 
   ${mediaqueries.tablet`
