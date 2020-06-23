@@ -71,7 +71,6 @@ const NavigationHeader: React.FC<{}> = () => {
             <NavLink to={`/about`} title={`About me`} activeClassName="active" >
               About
             </NavLink>
-            {/* <DarkModeToggle /> */}
           </NavControls>
         </NavContainer>
       </Section>
@@ -224,7 +223,5 @@ const Header = styled.div`
   width: 100%;
   z-index: 1000;
   top: 0;
-  // backdrop-filter: saturate(180%) blur(20px);
-  // background-color: rgba(255,255,255,0.92);
   background-color: ${p => p.theme.colors.background};;
 `;

@@ -24,10 +24,6 @@ const Paragraph = styled.p`
     max-width: 486px;
     margin: 0 auto 25px;
   `};
-
-  ${mediaqueries.phablet`
-    padding: 0 20px;
-  `};
 `;
 
 export default Paragraph;

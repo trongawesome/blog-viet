@@ -21,7 +21,7 @@ export default {
   errorBackground: "rgba(238, 86, 91, 0.1)",
   horizontalRule: "rgba(8, 8, 11, 0.15)",
   inputBackground: "rgba(0, 0, 0, 0.05)",
-  articleText: "#064039",
+  articleText: "#475C59",
   textTitle: "#064039",
   neumorphismShadown: "10px 10px 22px rgba(156, 192, 197, 0.28), -10px -10px 24px rgba(240, 249, 250, 0.65)",
   modes: {

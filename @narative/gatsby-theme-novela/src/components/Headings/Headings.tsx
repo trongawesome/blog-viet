@@ -27,7 +27,7 @@ const h1 = styled.h1`
 
   ${mediaqueries.phablet`
     font-size: 56px;
-    line-height: 1.3;
+    line-height: 1.15;
   `};
 `;
 

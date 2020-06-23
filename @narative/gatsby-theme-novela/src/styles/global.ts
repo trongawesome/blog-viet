@@ -39,7 +39,7 @@ export const globalStyles = css`
   }
 
   body {
-    font-family: "Text", Serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Inter', Segoe UI, Roboto, sans-serif;
     font-size: 1.6rem;
     margin: 0;
     font-weight: 400;
@@ -70,7 +70,7 @@ export const globalStyles = css`
   textarea,
   select,
   button {
-    font-family: "Text", Serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Inter', Segoe UI, Roboto, sans-serif;
   }
 
   .underline {
@@ -131,7 +131,7 @@ export const globalStyles = css`
   }
 
   p.dropcap:first-letter {
-    font-family: "Recoleta", Serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Inter', Segoe UI, Roboto, sans-serif;
     font-weight: 600;
     font-style: normal;
     font-size: 6em;

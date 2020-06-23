@@ -80,7 +80,7 @@ const Article: Template = ({ pageContext, location }) => {
     <Layout>
       <ArticleSEO article={article} authors={authors} location={location} />
 
-      <Section>
+      <Section narrow>
         <Container>
           <ArticleHero article={article} authors={authors} />
           <ArticleBody ref={contentSectionRef}>
@@ -125,7 +125,7 @@ const ArticleBody = styled.article`
   `}
 
   ${mediaqueries.phablet`
-    padding: 60px 0;
+    padding: 40px 0;
   `}
 `;
 
