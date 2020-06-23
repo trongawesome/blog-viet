@@ -218,11 +218,11 @@ const Title = styled(Headings.h2)`
   font-size: 28px;
   line-height: 1.3;
   font-family: ${p => p.theme.fonts.title};
-  color: ${p => p.theme.colors.secondary};
+  color: ${p => p.theme.colors.primary};
   margin-bottom: 8px;
   transition: color 0.3s ease-in-out;
   ${limitToTwoLines};
-  
+
   ${mediaqueries.tablet`
     font-size: 24px;  
     margin-bottom: 4px;

@@ -9,7 +9,7 @@ const OrderedList = styled.ol`
   padding: 15px 0 30px 30px;
   margin: 0 auto;
   transition: ${p => p.theme.colorModeTransition};
-  font-size: 18px;
+  font-size: 20px;
 
   width: 100%;
   max-width: 680px;
@@ -61,11 +61,11 @@ const OrderedList = styled.ol`
   li::before {
     counter-increment: list;
     content: counter(list) '.';
-    font-weight: 300;
+    font-weight: 400;
     position: absolute;
-    left: -3rem;
-    top: -0.3rem;
-    font-size: 2rem;
+    left: -30px;
+    top: 3px;
+    font-size: 20px;
 
     ${mediaqueries.tablet`
       left: 0;

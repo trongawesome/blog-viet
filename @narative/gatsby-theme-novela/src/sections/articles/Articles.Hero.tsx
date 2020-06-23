@@ -59,7 +59,7 @@ const ArticlesHero: React.FC<IAuthor> = ({ authors }) => {
 export default ArticlesHero;
 
 const HeadingContainer = styled.div`
-  margin: 160px 0 40px;
+  margin: 160px 0 96px;
   
   ${mediaqueries.desktop`
     width: 80%;
