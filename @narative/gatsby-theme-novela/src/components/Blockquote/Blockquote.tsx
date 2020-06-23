@@ -21,7 +21,6 @@ const Blockquote = styled.blockquote`
     line-height: 1.2;
     font-weight: ${p => p.theme.fontsWeight.bold};
     color: ${p => p.theme.colors.accent};
-    text-align: center;
 
     ${mediaqueries.tablet`
       font-size: 56px;
@@ -35,9 +34,12 @@ const Blockquote = styled.blockquote`
 
   cite {
     display: block;
-    font-size: 20px;
+    font-size: 32px;
     margin-top: 8px;
-    font-weight: ${p => p.theme.fontsWeight.light};
+    font-weight: ${p => p.theme.fontsWeight.bold};
+    color: ${p => p.theme.colors.accent};
+    opacity: .5;
+    font-style: normal;
     
     ${mediaqueries.tablet`
       padding-left: 180px;

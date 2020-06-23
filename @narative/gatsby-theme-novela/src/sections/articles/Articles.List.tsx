@@ -188,12 +188,13 @@ const ImageContainer = styled.div`
   & > div {
     height: 100%;
 
-    filter: saturate(90%) contrast(85%);
+    filter: saturate(70%) contrast(85%);
   }
 
   ${mediaqueries.tablet`
-    height: 200px;
+    height: 240px;
     margin-bottom: 35px;
+    padding: 10px;
   `}
 
   ${mediaqueries.phablet`
