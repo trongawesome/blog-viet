@@ -63,7 +63,7 @@ const Header = styled.header`
   z-index: 10;
   margin: 0px auto 56px;
   // max-width: 944px;
-  padding: 96px 128px 0px;
+  padding: 124px 128px 0px;
 
   ${mediaqueries.desktop`
     margin: 0 auto 70px;
