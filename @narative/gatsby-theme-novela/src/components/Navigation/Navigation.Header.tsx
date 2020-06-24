@@ -66,10 +66,16 @@ const NavigationHeader: React.FC<{}> = () => {
             )}
             <Logo fill={fill} />
             <Hidden>Navigate back to the homepage</Hidden>
+            <ArcTextWrap>
+              <Icons.ArcTagline /> 
+            </ArcTextWrap>
           </LogoLink>
           <NavControls>
             <NavLink to={`/about`} title={`About me`} activeClassName="active" >
               About
+            </NavLink>
+            <NavLink to={`/about`} title={`About me`} activeClassName="active" >
+              trongnguyen.co
             </NavLink>
           </NavControls>
         </NavContainer>
@@ -100,10 +106,9 @@ const BackArrowIconContainer = styled.div`
 const NavContainer = styled.div`
   position: relative;
   z-index: 100;
-  padding-top: 24px;
-  padding-bottom: 24px;
   display: flex;
   justify-content: space-between;
+  height: 72px;
 
   box-shadow: 0 7px 16px -17px rgba(107,69,43,0.60);
 
@@ -172,7 +177,11 @@ const LogoLink = styled(Link)<{ back: string }>`
   position: relative;
   display: flex;
   align-items: center;
-  left: ${p => (p.back === "true" ? "-54px" : 0)};
+  left: 0;
+  width: 114px;
+  height: 144px;
+  background-color: ${p => p.theme.colors.accent};
+  box-shadow: 0 7px 16px -12px rgba(107,69,43,0.60);
 
   ${mediaqueries.desktop_medium`
     left: 0
@@ -217,11 +226,27 @@ const Hidden = styled.span`
   overflow: hidden;
 `;
 
+const LogoWrap = styled.div`
+  margin-top: 32px;
+`;
+
+const ArcTextWrap = styled.div`
+  position: absolute;
+  display: inline-block;
+  width: 88px;
+  height: 88px;
+  bottom: 12px;
+  left: 12px;
+
+	animation: rotation 10s infinite linear;
+
+`;
+
 const Header = styled.div`
   position: fixed;
   display: block;
   width: 100%;
   z-index: 1000;
   top: 0;
-  background-color: ${p => p.theme.colors.background};;
+  background-color: ${p => p.theme.colors.background};
 `;

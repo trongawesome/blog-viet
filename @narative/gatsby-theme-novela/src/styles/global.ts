@@ -142,4 +142,13 @@ export const globalStyles = css`
     text-transform: uppercase;
     color: #3A5C21;
   }
+
+  @keyframes rotation {
+		from {
+				transform: rotate(0deg);
+		}
+		to {
+				transform: rotate(359deg);
+		}
+  }
 `;
