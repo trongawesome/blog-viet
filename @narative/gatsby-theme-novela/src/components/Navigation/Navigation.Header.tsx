@@ -76,7 +76,7 @@ const NavigationHeader: React.FC<{}> = () => {
               Tôi
             </NavLink>
             <LinkExternal data-a11y="false" aria-label={`Link to trongnguyen.co`} href={`https://trongnguyen.co`} >
-              Portfolio →
+              ★ English
             </LinkExternal>
           </NavControls>
         </NavContainer>
