@@ -5,6 +5,7 @@ import { useColorMode } from "theme-ui";
 
 import Section from "@components/Section";
 import Logo from "@components/Logo";
+import LinkExternal from "@components/LinkExternal";
 
 import Icons from "@icons";
 import mediaqueries from "@styles/media";
@@ -72,11 +73,11 @@ const NavigationHeader: React.FC<{}> = () => {
           </LogoLink>
           <NavControls>
             <NavLink to={`/about`} title={`About me`} activeClassName="active" >
-              About
+              Tôi
             </NavLink>
-            <NavLink to={`/about`} title={`About me`} activeClassName="active" >
-              trongnguyen.co
-            </NavLink>
+            <LinkExternal data-a11y="false" aria-label={`Link to trongnguyen.co`} href={`https://trongnguyen.co`} >
+              ★ English
+            </LinkExternal>
           </NavControls>
         </NavContainer>
       </Section>
@@ -182,6 +183,8 @@ const LogoLink = styled(Link)<{ back: string }>`
   height: 144px;
   background-color: ${p => p.theme.colors.accent};
   box-shadow: 0 7px 16px -12px rgba(107,69,43,0.60);
+  margin-top: -16px;
+  transition: margin 0.25s ease;
 
   ${mediaqueries.desktop_medium`
     left: 0
@@ -203,6 +206,7 @@ const LogoLink = styled(Link)<{ back: string }>`
     ${BackArrowIconContainer} {
       transform: translateX(-3px);
     }
+    margin-top: 0;
   }
 `;
 
@@ -226,10 +230,6 @@ const Hidden = styled.span`
   overflow: hidden;
 `;
 
-const LogoWrap = styled.div`
-  margin-top: 32px;
-`;
-
 const ArcTextWrap = styled.div`
   position: absolute;
   display: inline-block;
@@ -238,7 +238,7 @@ const ArcTextWrap = styled.div`
   bottom: 12px;
   left: 12px;
 
-	animation: rotation 10s infinite linear;
+	animation: rotation 14s infinite linear;
 
 `;
 
