@@ -25,13 +25,7 @@ const ArcTagline: Icon = ({ fill = "white" }) => {
 export default ArcTagline;
 
 const ArcContainer = styled.div`
-
-  .Logo__Desktop {
+  svg {
+    fill: ${p => p.theme.colors.primary};
   }
-
-  ${mediaqueries.tablet`
-    .Logo__Desktop {
-      display: none;
-    }
-  `}
 `;
