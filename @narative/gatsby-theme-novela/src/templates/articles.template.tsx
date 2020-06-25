@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "@emotion/styled";
+import mediaqueries from '@styles/media';
 
 import Section from "@components/Section";
 import SEO from "@components/SEO";
@@ -20,13 +21,15 @@ const ArticlesPage: Template = ({ location, pageContext }) => {
   return (
     <Layout>
       <SEO pathname={location.pathname} />
-      <ArticlesHero authors={authors} />
+      {/* <ArticlesHero authors={authors} /> */}
       <Section narrow>
         {/* <NavCategory category={category} /> */}
-        <ArticlesList articles={articles} />
-        <ArticlesPaginator show={pageContext.pageCount > 1}>
-          <Paginator {...pageContext} />
-        </ArticlesPaginator>
+        <Container>
+          <ArticlesList articles={articles} />
+          <ArticlesPaginator show={pageContext.pageCount > 1}>
+            <Paginator {...pageContext} />
+          </ArticlesPaginator>
+        </Container>
       </Section>
     </Layout>
   );
@@ -36,4 +39,12 @@ export default ArticlesPage;
 
 const ArticlesPaginator = styled.div<{ show: boolean }>`
   ${p => p.show && `margin-top: 64px;`}
+`;
+
+const Container = styled.div`
+  margin-top: 240px;
+
+  ${mediaqueries.tablet`
+    margin-top: 176px;
+  `}
 `;

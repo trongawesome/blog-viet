@@ -27,16 +27,9 @@ const ArticlesList: React.FC<ArticlesListProps> = ({
 }) => {
   if (!articles) return null;
 
-  const { gridLayout = 'tiles', hasSetGridLayout, getGridLayout } = useContext(
+  const { hasSetGridLayout, getGridLayout } = useContext(
     GridLayoutContext,
   );
-
-  const articlePairs = articles.reduce((result, value, index, array) => {
-    if (index % 2 === 0) {
-      result.push(array.slice(index, index + 2));
-    }
-    return result;
-  }, []);
 
   useEffect(() => getGridLayout(), []);
 
@@ -71,20 +64,20 @@ const ListItem: React.FC<ArticlesListItemProps> = ({ article, narrow }) => {
   return (
     <ArticleLink to={article.slug} data-a11y="false">
       <Item>
-        <ImageContainer >
-          {hasHeroImage ? <Image src={imageSource} /> : <ImagePlaceholder />}
-        </ImageContainer>
-        {/* <TextContainer>
-        </TextContainer> */}
+        <TextContainer>
           <Title dark hasOverflow={hasOverflow}>
             {article.title}
           </Title>
-          {/* <Excerpt>
+          <Excerpt>
             {article.excerpt}
-          </Excerpt> */}
+          </Excerpt>
           <MetaData>
             {article.date}
           </MetaData>
+        </TextContainer>
+        <ImageContainer >
+          {hasHeroImage ? <Image src={imageSource} /> : <ImagePlaceholder />}
+        </ImageContainer>
       </Item>
     </ArticleLink>
   );
@@ -121,17 +114,13 @@ const ArticlesListContainer = styled.div<{ alwaysShowAllDetails?: boolean }>`
 
 const List = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-column-gap: 30px;
+  grid-template-columns: 1fr;
+  grid-column-gap: 32px;
   grid-template-rows: 2;
 
   &:not(:last-child) {
     margin-bottom: 75px;
   }
-
-  ${mediaqueries.desktop_medium`
-    grid-template-columns: 1fr 1fr;
-  `}
 
   ${mediaqueries.tablet`
     grid-template-columns: 1fr;
@@ -144,25 +133,26 @@ const List = styled.div`
 
 const Item = styled.div`
   position: relative;
-  margin-bottom: 64px;
+  margin-bottom: 140px;
+  padding: 0 128px;
 
+  ${mediaqueries.desktop`
+    padding: 0;
+  `}
   ${mediaqueries.tablet`
-    margin-bottom: 60px;
+    margin-bottom: 96px;
   `}
 
-  // @media (max-width: 540px) {
-  //   background: ${p => p.theme.colors.card};
-  // }
-
   ${mediaqueries.phablet`
-    margin-bottom: 40px;
+    // margin-bottom: 40px;
+    // padding: 0;
   `}
 
 `;
 
 const ImageContainer = styled.div`
   position: relative;
-  height: 300px;
+  height: auto;
   margin-bottom: 24px;
   transition: transform 0.3s var(--ease-out-quad),
     box-shadow 0.3s var(--ease-out-quad);
@@ -192,7 +182,6 @@ const ImageContainer = styled.div`
   }
 
   ${mediaqueries.tablet`
-    height: 240px;
     margin-bottom: 35px;
     padding: 10px;
   `}
@@ -205,46 +194,46 @@ const ImageContainer = styled.div`
 `;
 
 const TextContainer = styled.div`
-  position: absolute;
-  left: 0;
-  top: 0;
-  padding: 40px 40px;
-
-  ${mediaqueries.phablet`
-    padding: 40px 32px;
-  `}
+  margin-bottom: 24px;
 `;
 
 const Title = styled(Headings.h2)`
-  font-size: 28px;
-  line-height: 1.3;
+  font-size: 56px;
+  line-height: 1.25;
   font-family: ${p => p.theme.fonts.title};
   color: ${p => p.theme.colors.primary};
-  margin-bottom: 8px;
+  margin-bottom: 16px;
+  text-align: center;
   transition: color 0.3s ease-in-out;
   ${limitToTwoLines};
 
+  ${mediaqueries.desktop`
+    font-size: 48px;  
+  `}
+
   ${mediaqueries.tablet`
-    font-size: 24px;  
-    margin-bottom: 4px;
+    font-size: 40px;  
+    margin-bottom: 12px;
   `}
 
   ${mediaqueries.phablet`
-    font-size: 22px;  
+    font-size: 38px;  
+    line-height: 1.2;
     padding-top: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     -webkit-line-clamp: 3;
   `}
 `;
 
 const Excerpt = styled.p`
   ${limitToTwoLines};
-  font-size: 18px;
-  margin-bottom: 10px;
+  font-size: 24px;
+  margin-bottom: 16px;
   color: ${p => p.theme.colors.secondary};
   font-family: ${p => p.theme.fonts.body};
+  font-weight: ${p => p.theme.fontsWeight.light};
   display: box;
-  max-width: 515px;
+  text-align: center;
 
   ${mediaqueries.desktop`
     display: -webkit-box;
@@ -257,17 +246,20 @@ const Excerpt = styled.p`
   ${mediaqueries.phablet`
     max-width: 100%;
     padding:  0 20px;
-    margin-bottom: 20px;
+    font-size: 20px;
+    margin-bottom: 12px;
     -webkit-line-clamp: 3;
   `}
 `;
 
 const MetaData = styled.div`
-  font-weight: 400;
-  font-size: 14px;
+  font-weight: ${p => p.theme.fontsWeight.regular};
+  font-size: 12px;
   color: ${p => p.theme.colors.secondary};
   font-family: ${p => p.theme.fonts.body};
   opacity: 0.6;
+  text-align: center;
+  text-transform: uppercase;
 
   ${mediaqueries.phablet`
     max-width: 100%;

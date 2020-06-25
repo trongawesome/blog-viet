@@ -190,6 +190,11 @@ const LogoLink = styled(Link)<{ back: string }>`
     left: 0
   `}
 
+  ${mediaqueries.tablet`
+    width: 88px;
+    height: 120px;
+  `}
+
   &[data-a11y="true"]:focus::after {
     content: "";
     position: absolute;
@@ -237,8 +242,12 @@ const ArcTextWrap = styled.div`
   height: 88px;
   bottom: 12px;
   left: 12px;
-
-	animation: rotation 14s infinite linear;
+  animation: rotation 14s infinite linear;
+  
+  ${mediaqueries.tablet`
+    width: 64px;
+    height: 64px;
+  `}
 
 `;
 
