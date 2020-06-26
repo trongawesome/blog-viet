@@ -59,7 +59,7 @@ const SocialLinks: React.FC<SocialLinksProps> = ({
             href={option.url}
           >
             <Icon fill={fill} />
-            <Hidden>Link to ${option.url}</Hidden>
+            {/* <Hidden>Link to ${option.url}</Hidden> */}
           </SocialIconContainer>
         );
       })}

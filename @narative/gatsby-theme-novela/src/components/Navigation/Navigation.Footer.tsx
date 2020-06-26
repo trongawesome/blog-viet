@@ -81,7 +81,7 @@ const FooterContainer = styled.div`
 
   ${mediaqueries.phablet`
     padding-bottom: 48px;
-    padding-top: 0;
+    padding-top: 40px;
   `}
 `;
 

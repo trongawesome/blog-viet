@@ -231,7 +231,7 @@ const Frame = styled.nav`
   position: relative;
   z-index: 1;
   display: inline-flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 
   ${mediaqueries.tablet`
@@ -240,7 +240,7 @@ const Frame = styled.nav`
   `}
 
   ${mediaqueries.desktop_up`
-    justify-content: flex-start;
+    justify-content: center;
     ${MobileReference} { display: none; }
   `}
 `;
