@@ -38,7 +38,7 @@ const ArticlesPage: Template = ({ location, pageContext }) => {
 export default ArticlesPage;
 
 const ArticlesPaginator = styled.div<{ show: boolean }>`
-  ${p => p.show && `margin-top: 64px;`}
+  ${p => p.show && `margin-top: 0;`}
 `;
 
 const Container = styled.div`

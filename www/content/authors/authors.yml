@@ -1,9 +1,10 @@
 - name: Trong Nguyen
   bio: |
-    Write to practice. Write to find ideas
+    Hi, mình là Trọng, Product Designer Việt Nam đang sống ở Singapore. Mình yêu tiếng Việt và tạo ra nơi này để chia sẽ những suy nghĩ của mình bằng tiếng mẹ đẻ.
   avatar: ./avatars/trong-nguyen.jpg
   featured: true
   social:
+    - url: https://www.instagram.com/trongawesome
     - url: https://twitter.com/trongtnt92
     - url: https://medium.com/@trongtnt92
 
