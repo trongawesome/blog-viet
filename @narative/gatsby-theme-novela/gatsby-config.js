@@ -20,6 +20,7 @@ module.exports = ({
     `gatsby-transformer-yaml`,
     `gatsby-plugin-theme-ui`,
     `gatsby-plugin-sitemap`,
+    `gatsby-plugin-netlify-cms`,
     {
       resolve: `gatsby-plugin-feed`,
       options: {
